@@ -4,18 +4,26 @@
     <meta charset="utf-8">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Helvetica, Arial, sans-serif;
             background-color: #323232;
-            color: #E0E0E0;
+            color: #f4f4f4;
             padding: 10px;
-            font-size: 11px;
+            font-size: 12px;
         }
+
         .field {
             margin-bottom: 10px;
             display: flex;
             flex-direction: column;
         }
-        label { margin-bottom: 4px; color: #AAA; }
+
+        label {
+            margin-right: 5px;
+            margin-bottom: 4px;
+            color: #AAA;
+            min-width: fit-content;
+        }
+
         input {
             background: #1E1E1E;
             border: 1px solid #444;
@@ -23,6 +31,7 @@
             padding: 5px;
             border-radius: 3px;
         }
+
         .output {
             background: #252525;
             padding: 8px;
@@ -30,6 +39,7 @@
             margin: 10px 0;
             font-weight: bold;
         }
+
         button {
             width: 100%;
             padding: 8px;
@@ -40,19 +50,57 @@
             cursor: pointer;
             font-weight: bold;
         }
-        button:hover { background: #0D66D0; }
+
+        button:hover {
+            background: #0D66D0;
+        }
+
+        select {
+            background: #1E1E1E;
+            color: #f4f4f4;
+            padding: 4px;
+            border: 0;
+            width: 100%;
+            margin-left: 5px;
+        }
+
+        .scale_ratio {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="field">
-        <label>Real Length (meters):</label>
+        <label>Length 1:1 (m):</label>
         <input type="number" id="meters" value="10" step="0.5">
     </div>
-    <div class="field">
-        <label>Scale Ratio (1 : X):</label>
-        <input type="number" id="scale" value="200" step="1">
+
+    <div class="scale_ratio">
+        <label>Scale Ratio 1:</label>
+
+        <select name="scale_ratios" id="scale">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option selected="selected" value="100">100</option>
+            <option value="200">200</option>
+            <option value="250">250</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+            <option value="1500">1500</option>
+            <option value="2000">2000</option>
+        </select>
     </div>
-    <div class="output" id="resultText">Result: 50.00 mm (141.73 pt)</div>
+
+    <br>
+    <label>Scaled Length</label>
+    <div class="output" id="resultText">100.00 mm | 283.46 pt</div>
     <button id="drawBtn">Draw Line</button>
 
     <script src="js/CSInterface.js"></script>

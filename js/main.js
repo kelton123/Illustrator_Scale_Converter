@@ -11,7 +11,7 @@ function calculatePoints() {
     var mm = (meters * 1000) / scale;
     var pts = mm * 2.83464567;
     
-    resultText.innerText = "Result: " + mm.toFixed(2) + " mm (" + pts.toFixed(2) + " pt)";
+    resultText.innerText = mm.toFixed(2) + " mm   |   "+ pts.toFixed(2) + " pt";
     return pts;
 }
 
