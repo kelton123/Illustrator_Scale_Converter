@@ -29,14 +29,20 @@
                 <UI>
                     <Type>Panel</Type>
                     <Menu>Scale Converter</Menu>
+                    <Icons>
+                        <Icon Type="Normal">./icons/IconDark.png</Icon>
+                        <Icon Type="RollOver">./icons/IconDark.png</Icon>
+                        <Icon Type="DarkNormal">./icons/IconDark.png</Icon>
+                        <Icon Type="DarkRollOver">./icons/IconDark.png</Icon>
+                    </Icons>
                     <Geometry>
                         <Size>
-                            <Width>240</Width>
-                            <Height>300</Height>
+                            <Width>250</Width>
+                            <Height>220</Height>
                         </Size>
                         <MinSize>
                             <Width>200</Width>
-                            <Height>200</Height>
+                            <Height>220</Height>
                         </MinSize>
                     </Geometry>
                 </UI>
