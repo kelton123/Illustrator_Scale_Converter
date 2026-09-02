@@ -8,15 +8,15 @@ This extension is used to aid in architectural drawing within Adobe Illustrator 
 The default values are: 1:1 - 10m --> 1:100 = 100.00mm
 
 ## Installation
-1. Download the .zxp from the Release section.
-2. Go to this site https://zxpinstaller.com/ and install the .zxp installer
-
-Confirm that the installer worked:
-1. Go to the Adobe CEP extensions folder:
+1. Download the .zip folder from the release section.
+2. Go to the Adobe CEP extensions folder:
     - Mac: /Library/Application Support/Adobe/CEP/extensions
     - Win: C:\Program Files (x86)\Common Files\Adobe\CEP\extensions\
-2. Create a folder named ArchitectScaleConverter.
-3. Extract the contents of the zip file to the ArchitectScaleConverter folder.
+3. Create a folder named ArchitectScaleConverter.
+4. Extract the contents of the zip file to the ArchitectScaleConverter folder.
+5. Enable Adobe debug mode (required as this plugin isn't certified):
+    - Mac (terminal): `defaults write com.adobe.CSXS.12 PlayerDebugMode 1`
+    - Win (CMD): `reg add "HKCU\Software\Adobe\CSXS.12" /v PlayerDebugMode /t REG_SZ /d 1 /f`
 
 
 ## Usage
