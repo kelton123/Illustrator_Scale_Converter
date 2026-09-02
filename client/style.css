@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <style>
-        body {
+body {
             font-family: Helvetica, Arial, sans-serif;
             background-color: #323232;
             color: #f4f4f4;
@@ -76,41 +71,3 @@
             align-items: center;
             margin: 10px 0;
         }
-    </style>
-</head>
-
-<body>
-    <div class="field">
-        <label>Length 1:1 (m):</label>
-        <input type="number" id="meters" value="10">
-    </div>
-
-    <div class="scale_ratio">
-        <label>Scale Ratio 1:</label>
-
-        <select name="scale_ratios" id="scale">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="50">50</option>
-            <option selected="selected" value="100">100</option>
-            <option value="200">200</option>
-            <option value="250">250</option>
-            <option value="500">500</option>
-            <option value="1000">1000</option>
-            <option value="1500">1500</option>
-            <option value="2000">2000</option>
-        </select>
-    </div>
-
-    <br>
-    <label>Scaled Length</label>
-    <div class="output" id="resultText">100.00 mm | 283.46 pt</div>
-    <button id="drawBtn">Draw Line</button>
-
-    <script src="js/CSInterface.js"></script>
-    <script src="js/main.js"></script>
-</body>
-</html>
